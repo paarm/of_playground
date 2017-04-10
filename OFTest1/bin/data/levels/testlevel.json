@@ -1,0 +1,374 @@
+{
+	"Header": {
+		"LevelName": "Testlevel 1",
+		"AssetPath": "./"
+	},
+	"Textures": [
+		{
+			"TextureName": 	"Background",
+			"TextureFile": 	"testhg.png"
+		},
+		{
+			"TextureName": 	"Testschwein",
+			"TextureFile": 	"testschwein.png"
+		},
+		{
+			"TextureName": 	"TestschweinBlack",
+			"TextureFile": 	"testschweinblack.png"
+		},
+		{
+			"TextureName": 	"Fakel",
+			"TextureFile": 	"fakel.png"
+		},
+		{
+			"TextureName": 	"Strip10",
+			"TextureFile": 	"strip10.png"
+		},
+		{
+			"TextureName": 	"Brick",
+			"TextureFile": 	"brick.png"
+		},
+		{
+			"TextureName": 	"Gravity",
+			"TextureFile": 	"gravity.png"
+		}
+	],
+	"AutoFramesAndSequences": [
+		{
+			"TextureName": "Testschwein",
+			"SequenceName": "Testschwein.Walk",
+			"FrameCountX": 11,
+			"FrameCountY": 1
+		},
+		{
+			"TextureName": "TestschweinBlack",
+			"SequenceName": "TestschweinBlack.Walk",
+			"FrameCountX": 11,
+			"FrameCountY": 1
+		},
+		{
+			"TextureName": "Fakel",
+			"SequenceName": "Fakel.Burn",
+			"FrameCountX": 9,
+			"FrameCountY": 1
+		},
+		{
+			"TextureName": "Strip10",
+			"SequenceName": "Strip10.Walk",
+			"FrameCountX": 10,
+			"FrameCountY": 1
+		}
+	
+	],
+	"FramesForTextures": [
+		{
+			"TextureName": "Testschwein",
+			"FrameName": "Testschwein.Mauer0",
+			"SourceX": 0,
+			"SourceY": 0,
+			"Width": 32,
+			"Height": 32
+		},
+		{
+			"TextureName": "Testschwein",
+			"FrameName": "Testschwein.Mauer1",
+			"SourceX": 64,
+			"SourceY": 0,
+			"Width": 32,
+			"Height": 32
+		}		
+	],
+	"FramesForSequences": [
+		{
+			"SequenceName": "Testschwein.WalkReversed",
+			"Frames": [
+				{
+					"FrameName": "Testschwein.Mauer0"
+				},
+				{
+					"FrameName": "Testschwein.Mauer1"
+				}
+			]
+		}		
+	],
+	"ObjectDescriptors": [
+		{
+			"ObjectDescId":			"BackgroundA",
+			"DefaultFrame":			"Background"
+		},
+		{
+			"ObjectDescId":			"Nothing"
+		}, 
+		{
+			"ObjectDescId":			"MauerA",
+			"DefaultFrame":			"Brick",
+			"ObjectHint":			"Brick"
+		}, 
+		{
+			"ObjectDescId":			"GravityA",
+			"DefaultFrame":			"Gravity",
+			"ObjectHint":			"Gravity"
+		},
+		{
+			"ObjectDescId":			"GravityPickable",
+			"DefaultFrame":			"Gravity",
+			"ObjectHint":			"GravityPickable"
+		},
+		{
+			"ObjectDescId":			"FakelA",
+			"DefaultFrame":			"Fakel.Burn0",
+			"DefaultSequence": 		"Fakel.Burn",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Fakel.Burn",
+					"FrameDelayInMs": 100
+				}
+			]			
+		},		
+		{
+			"ObjectDescId": 		"MauerB",
+			"DefaultFrame":			"Testschwein.Mauer0",
+			"DefaultSequence": 		"Testschwein.WalkReversed",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Testschwein.WalkReversed",
+					"FrameDelayInMs": 150
+				}
+			]			
+		},		
+		{
+			"ObjectDescId": 		"Strip10A",
+			"DefaultFrame":			"Strip10.Walk0",
+			"DefaultSequence": 		"Strip10.Walk",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Strip10.Walk",
+					"FrameDelayInMs": 150
+				}
+			]			
+		},		
+		{
+			"ObjectDescId": 		"FixedA",
+			"DefaultFrame":			"Testschwein.Walk0",
+			"DefaultSequence": 		"Testschwein.Walk",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Testschwein.Walk",
+					"FrameDelayInMs": 50
+				}
+			]			
+		},
+		{
+			"ObjectDescId": 		"FixedB",
+			"DefaultFrame":			"Testschwein.Walk0",
+			"DefaultSequence": 		"Testschwein.Walk",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Testschwein.Walk",
+					"FrameDelayInMs": 50
+				}
+			]			
+		},
+		{
+			"ObjectDescId":			"SpikeA",
+			"DefaultFrame":			"Testschwein.Walk0",
+			"DefaultSequence": 		"Testschwein.Walk",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Testschwein.Walk",
+					"FrameDelayInMs": 50
+				}
+			]			
+		},
+		{
+			"ObjectDescId": 		"Player",
+			"ObjectHint": 			"Player",
+			"DefaultFrame":			"TestschweinBlack.Walk0",
+			"DefaultSequence": 		"TestschweinBlack.Walk",
+			"ObjectSequences": [
+				{
+					"SequenceName": "TestschweinBlack.Walk",
+					"FrameDelayInMs": 50
+				} 
+			]
+		},
+		{
+			"ObjectDescId": 		"EnemyA",
+			"ObjectHint": 			"Enemy",
+			"DefaultFrame":			"Testschwein.Walk0",
+			"DefaultSequence": 		"Testschwein.Walk",
+			"ObjectSequences": [
+				{
+					"SequenceName": "Testschwein.Walk",
+					"FrameDelayInMs": 50
+				}
+			]
+		}
+	],
+	"Level": {
+		"Layers": [
+			{
+				"LayerName": "BackgroundLayer",
+				"ZOrder": 0,
+				"LayerObjects": [
+					{
+						"ObjectName": "Background",
+						"ObjectDescId": "BackgroundA",
+						"PosX": 0,
+						"PosY": 0
+					}
+				]
+			},
+			{
+				"LayerName": "PlayfieldLayer",
+				"ZOrder": 1,
+				"GridX": 32,
+				"GridY": 32,
+				"LayerObjects": [
+					{
+						"ObjectName": "",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 0,
+						"GridPosY": 0,
+						"RepeatX": 11
+					},
+					{
+						"ObjectName": "12/1",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 12,
+						"GridPosY": 1
+					},
+					{
+						"ObjectName": "",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 14,
+						"GridPosY": 0,
+						"RepeatX": 20
+					},
+					{
+						"ObjectName": "0/23",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 0,
+						"GridPosY": 15,
+						"RepeatX": 6
+					},
+
+					{
+						"ObjectName": "",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 6,
+						"GridPosY": 18,
+						"RepeatX": 4
+					},
+					{
+						"ObjectName": "10/19",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 10,
+						"GridPosY": 19,
+						"RepeatX": 2
+					},
+					{
+						"ObjectName": "",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 12,
+						"GridPosY": 19,
+						"RepeatX": 32
+					},
+					{
+						"ObjectName": "",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 14,
+						"GridPosY": 15
+					},
+					{
+						"ObjectName": "",
+						"ObjectDescId": "MauerA",
+						"GridPosX": 16,
+						"GridPosY": 15
+					},
+
+					{
+						"ObjectName": "",
+						"ObjectDescId": "GravityA",
+						"GridPosX": 15,
+						"GridPosY": 19
+					},
+					{
+						"ObjectName": "",
+						"ObjectDescId": "GravityPickable",
+						"GridPosX": 19,
+						"GridPosY": 19
+					}
+				]				
+			},
+			{
+				"LayerName": "PlayerLayer",
+				"ZOrder": 2,
+				"GridX": 32,
+				"GridY": 32,
+				"LayerObjects": [
+					{
+						"ObjectName": "Player",
+						"ObjectDescId": "Player",
+						"GridPosX": 2,
+						"GridPosY": 5
+					}
+				]
+			},
+			{
+				"LayerName": "EnemiesLayer",
+				"ZOrder": 2,
+				"GridX": 32,
+				"GridY": 32,
+				"LayerObjects": [
+					{
+						"ObjectName": "Enemy",
+						"ObjectDescId": "EnemyA",
+						"GridPosX": 4,
+						"GridPosY": 5
+					},
+					{
+						"ObjectName": "Enemy2",
+						"ObjectDescId": "EnemyA",
+						"GridPosX": 24,
+						"GridPosY": 5
+					},
+					{
+						"ObjectName": "Enemy3",
+						"ObjectDescId": "EnemyA",
+						"GridPosX": 33,
+						"GridPosY": 1
+					},
+					{
+						"ObjectName": "Enemy4",
+						"ObjectDescId": "EnemyA",
+						"GridPosX": 1,
+						"GridPosY": 2
+					}
+	
+				]
+			},
+			{
+				"LayerName": "DecoLayer",
+				"ZOrder": 2,
+				"GridX": 32,
+				"GridY": 32,
+				"LayerObjects": [
+					{
+						"ObjectName": "",
+						"ObjectDescId": "FakelA",
+						"GridPosX": 18,
+						"GridPosY": 18
+					},
+					{
+						"ObjectName": "",
+						"ObjectDescId": "FakelA",
+						"GridPosX": 12,
+						"GridPosY": 18
+					}
+					
+				]
+			}			
+		]
+	}
+}
